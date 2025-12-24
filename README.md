@@ -51,6 +51,20 @@ Bu repository içerisinde yer alan dosyalar ve amaçları aşağıda açıklanm�
 
 ---
 
+## 🧪 QA ve Doğrulama Süreci
+
+QA süreci aşağıdaki adımları kapsamaktadır:
+
+- Client gereksinimlerinin analiz edilmesi
+- Test planının oluşturulması
+- Test senaryolarının hazırlanması
+- Uygulamanın test edilmesi
+- Bulgu ve sonuçların raporlanması
+
+Bu süreçlerin detayları **V&V_HavaDurumu_QA.pdf** dosyasında yer almaktadır.
+
+---
+
 ### 📄 `V&V_Otel_Client.pdf`
 - **Bizim ekibimiz tarafından**, başka bir QA ekibi için hazırlanmış **client (işveren) raporu**
 - Ekip olarak yalnızca QA değil, **client rolünü de üstlendiğimizi** göstermektedir
@@ -69,21 +83,45 @@ Aşağıdaki dosyalar, Hava Durumu web uygulamasının çalışan halini temsil 
 Uygulama:
 - Vanilla JavaScript kullanılarak geliştirilmiştir
 - OpenWeather API üzerinden hava durumu verilerini alır
-- TR / EN dil desteği ve Koyu / Açık tema desteği sunar
+- Sayfa ilk açıldığında şehir slider’ı gösterir
 
----
+Herhangi bir framework kullanılmadan, tamamen **HTML, CSS ve JavaScript** ile geliştirilmiştir.
 
-## 🧪 QA ve Doğrulama Süreci
+### 🚀 Özellikler
 
-QA süreci aşağıdaki adımları kapsamaktadır:
+* 🌍 Şehir bazlı hava durumu sorgulama
+* 📅 7 günlük hava tahmini
+* 🌗 Koyu / Açık tema
+* 🌐 Türkçe / İngilizce dil desteği
+* 🧼 Sade ve performanslı yapı
 
-- Client gereksinimlerinin analiz edilmesi
-- Test planının oluşturulması
-- Test senaryolarının hazırlanması
-- Uygulamanın test edilmesi
-- Bulgu ve sonuçların raporlanması
+### 🔑 OpenWeather API Key Alma
 
-Bu süreçlerin detayları **V&V_HavaDurumu_QA.pdf** dosyasında yer almaktadır.
+Uygulama çalışmak için **OpenWeather API key** gerektirir.
+
+#### 1️⃣ API Key Al
+
+1. [https://openweathermap.org](https://openweathermap.org) adresine git
+2. Ücretsiz bir hesap oluştur
+3. Giriş yaptıktan sonra **API Keys** bölümüne gir
+4. Oluşturulan API key’i kopyala
+
+### 🛠 API Key’i Projeye Ekleme
+
+1. Proje içindeki **`script.js`** dosyasını aç
+2. En üstte şu satırı bul:
+
+```js
+const API_KEY = "";
+```
+
+3. Boş tırnakların içine kendi API key’ini yapıştır:
+
+```js
+const API_KEY = "BURAYA_API_KEYINI_YAPISTIR";
+```
+
+4. Dosyayı kaydet ve uygulamayı tarayıcıda aç
 
 ---
 
